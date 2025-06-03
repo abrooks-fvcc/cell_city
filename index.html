@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cell City Tour</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #e0f0ff;
+      color: #333;
+    }
+    header {
+      background-color: #276192;
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .container {
+      padding: 20px;
+      text-align: center;
+    }
+    .start-btn {
+      background-color: #276192;
+      color: white;
+      padding: 12px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .start-btn:hover {
+      background-color: #1d4f75;
+    }
+    .slide {
+      display: none;
+      padding: 20px;
+    }
+    .active {
+      display: block;
+    }
+    .img-wrap {
+      max-width: 90%;
+      margin: 20px auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 4px solid #276192;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Cell City</h1>
+  </header>
+  <div class="container">
+    <p>You're about to explore a living cell reimagined as a bustling city. Ready to begin your adventure?</p>
+    <button class="start-btn" onclick="startTour()">Begin Your Adventure</button>
+
+    <div id="slide1" class="slide">
+      <h2>🏙️ Nucleus – The Mayor’s Office</h2>
+      <p>This is where decisions are made and instructions are stored. Like a mayor’s office, the nucleus controls the city's operations.</p>
+    </div>
+  </div>
+
+  <script>
+    function startTour() {
+      document.querySelector(".start-btn").style.display = "none";
+      document.getElementById("slide1").classList.add("active");
+    }
+  </script>
+</body>
+</html>
